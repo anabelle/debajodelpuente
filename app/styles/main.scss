@@ -12,9 +12,43 @@ $icon-font-path: '../fonts/';
 }
 
 /* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+body, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+table {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 1.3em;
+  text-align: center;
+  height: 99%;
+  width: 99%;
+  tr {
+    td {
+      border: 1px solid #eee;
+    }
+  }
+}
+
+.palabra_h , .palabra_v {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.posible_h {
+  // background: green;
+}
+
+.posible_v {
+  background: orange;
+}
+
+#words {
+  height: 100%;
+  width: 100%;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
