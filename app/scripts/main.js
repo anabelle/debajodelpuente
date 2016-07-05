@@ -1,22 +1,22 @@
 $( document ).ready( function($){
 	// Definiciones
-	var x = 25;
+	var x = 15;
 	var y = 15;
 
 	var palabras = [ 
 		// Verticales
-		{ palabra: "luz", orientacion: "v", link: "http://google.com/5" },
-		{ palabra: "naranjas", orientacion: "v", link: "http://google.com/6" },
-		{ palabra: "pez", orientacion: "v", link: "http://google.com/" },
-		{ palabra: "lobo", orientacion: "v", link: "http://google.com/2" },
-		{ palabra: "compersión", orientacion: "v", link: "https://www.google.com/#q=compersion" },
+		{ palabra: 'Bitácora', orientacion: 'v', link: 'http://bitacora.debajodelpuente.com/' },
+		{ palabra: 'PuentePalabra', orientacion: 'v', link: 'http://palabras.debajodelpuente.com/' },
+		{ palabra: 'pez', orientacion: 'v', link: 'http://google.com/' },
+		{ palabra: 'lobo', orientacion: 'v', link: 'http://google.com/2' },
+		{ palabra: 'compersión', orientacion: 'v', link: 'https://www.google.com/#q=compersion' },
 
 		// Horizontales
-		{ palabra: "perros", orientacion: "h", link: "http://google.com/3" },
-		{ palabra: "murcielago", orientacion: "h", link: "http://google.com/4" },
-		{ palabra: "nada", orientacion: "h", link: "http://google.com/7" },
-		{ palabra: "mar", orientacion: "h", link: "http://google.com/8" },
-		{ palabra: "sol", orientacion: "h", link: "http://google.com/9" },
+		{ palabra: 'ZapatoLab', orientacion: 'h', link: 'http://zapatolab.debajodelpuente.com/' },
+		{ palabra: 'murcielago', orientacion: 'h', link: 'http://google.com/4' },
+		{ palabra: 'nada', orientacion: 'h', link: 'http://google.com/7' },
+		{ palabra: 'mar', orientacion: 'h', link: 'http://google.com/8' },
+		{ palabra: 'sol', orientacion: 'h', link: 'http://google.com/9' },
 	];
 
 	generarTabla( x, y);
@@ -49,8 +49,8 @@ $( document ).ready( function($){
 
 			largoPalabra = palabras[i].palabra.length;
 			
-			if( palabras[i].orientacion === "h"){
-				console.log( "ubicando h" );
+			if( palabras[i].orientacion === 'h'){
+				console.log( 'ubicando h' );
 				// cleanup
 				$('.posible_h').removeClass('posible_h');
 
@@ -65,7 +65,7 @@ $( document ).ready( function($){
 					})
 				});
 
-				var inicio_h = shuffle($(".posible_h")).slice(0, 1);
+				var inicio_h = shuffle($('.posible_h')).slice(0, 1);
 				var prev = null;
 				for (var c = 0; c < largoPalabra; c++) {
 					if( prev === null ){
@@ -78,8 +78,8 @@ $( document ).ready( function($){
 					// console.log( palabras[i].palabra[c] );
 				}
 
-			}else if( palabras[i].orientacion === "v" ){
-				console.log( "ubicando v" ); 	
+			}else if( palabras[i].orientacion === 'v' ){
+				console.log( 'ubicando v' ); 	
 				var consecutivosLibres = 0;
 				var posibleInicio = -1;
 				var prevEmpty = false;
@@ -89,7 +89,7 @@ $( document ).ready( function($){
 					// $('.posible_v_'+posibleInicio).text($('.posible_v_'+posibleInicio).length);
 					posibleInicio++;
 
-					$("table tr > :nth-child("+(c+1)+")").each(function(i, e){
+					$('table tr > :nth-child('+(c+1)+')').each(function(i, e){
 						if( isEmpty( $(e) ) ){
 							if( prevEmpty === false ){
 								posibleInicio++;
@@ -106,7 +106,7 @@ $( document ).ready( function($){
 						}
 
 						if( $('.posible_v_'+posibleInicio).length >= largoPalabra ){
-							console.log( largoPalabra + " es menor o igual que " + $('.posible_v_'+posibleInicio).length  );
+							console.log( largoPalabra + ' es menor o igual que ' + $('.posible_v_'+posibleInicio).length  );
 							$('.posible_v_'+posibleInicio).first().addClass('posible_v');
 						}
 					});
@@ -118,8 +118,8 @@ $( document ).ready( function($){
 					// $('.posible_v_'+posibleInicio).text($('.posible_v_'+posibleInicio).length);
 				}
 
-				var inicio_v = shuffle($(".posible_v")).slice(0, 1);
-				$(".posible_v").removeClass();
+				var inicio_v = shuffle($('.posible_v')).slice(0, 1);
+				$('.posible_v').removeClass();
 
 				var prev = null;
 				for (var c = 0; c < largoPalabra; c++) {
@@ -141,7 +141,7 @@ $( document ).ready( function($){
 	}
 
 	function letraAleatoria(){
-		var possible = "abcdefghijklmnñopqrstuvwxyz";
+		var possible = 'abcdefghijklmnñopqrstuvwxyz';
 		var letra = possible.charAt(Math.floor(Math.random() * possible.length));
 		return letra;
 	}
@@ -186,12 +186,12 @@ $( document ).ready( function($){
 	}
 
 	// INTERACCIONES
-	$("[class^='palabra_']").css({
+	$('[class^=\'palabra_\']').css({
 		cursor: 'pointer',
 		transition: 'all 0.5s ease-in-out'
 	});
 
-	$("[class^='palabra_']").hover(
+	$('[class^=\'palabra_\']').hover(
 		function () {
 			var groupNumber = $(this).attr('class').split('_')[1];
 			$('.palabra_' + groupNumber).css({
@@ -207,7 +207,7 @@ $( document ).ready( function($){
 		}
 	);
 
-	$("[class^='palabra_']").on( 'click', function(e){
+	$('[class^=\'palabra_\']').on( 'click', function(e){
 		window.open( $(this).data('link'), '_blank'); 
 	});
 });
