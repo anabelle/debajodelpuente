@@ -18,16 +18,9 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
-  i {
-    font-size: 1.5em;
-    color: #fd8c02;
-    margin: 3px;
-  }
-  i.glyphicon.glyphicon-th-large {
-    font-size: 1.6em;
-  }
-  .glyphicon {
-    top: -1px;
+  img {
+    width: 30px;
+    margin-right: 10px;
   }
 }
 nav {
@@ -41,7 +34,7 @@ p {
 
 section {
     padding-top: 3em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     .row {
       margin-top: 3em; 
     }
@@ -75,7 +68,11 @@ footer {
     position: relative;
     vertical-align: bottom;
   }
+  sup {
+     top: -2px;
+  }
 }
+
 
 h1.titulo {
   /*border: 4px solid #fff;*/
@@ -100,9 +97,20 @@ h1.titulo {
   margin-top: 19px;
   margin-right: 20px;
 }
-
-div#words {
-  height: 89vh;
+section#sopa {
+  height: 100vh;
+  div.texto_s {
+    display: inline-block;
+    padding: 10px;
+    padding-top: 2em;
+    width: 100%;
+  }
+  div#words {
+    display: inline-block;
+    float: right;
+    width:100%;
+    padding-bottom: 1em;
+  }
 }
 
 section#reticula{
@@ -174,9 +182,18 @@ section#reticula{
 a.verproyecto:hover {
   color: #000;
 }
-
+div.info2 {
+  background-color: #fd8c02;
+  color: #000;
+  left: 0;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin-bottom:2em;
+}
 
 div.info {
+  display: none;
   background-color: #fd8c02;
   color: #000;
   left: 0;
@@ -189,6 +206,10 @@ div.info {
 section#informacion {
     display: none;
     z-index: 100;
+    .video img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
 }
 
 .browserupgrade {
@@ -215,69 +236,122 @@ td[class^="palabra_"]{
   background: orange;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
+    line-height: 40px;
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 40px;
     padding-bottom: 19px;
   }
 }
 .social {
+  margin-bottom: 1em;
+  margin-top: 3em;
   text-align: center;
-  margin-bottom: 2em;
-  img {
+
+  .face {
+    display: inline-block;
+    background-image: url("../img/facebook.svg");
     width: 30px;
+    height: 30px;
+    &:hover {
+      background-image: url("../img/facebook_h.svg")
+    }
+  }
+  .tumblr {
+    display: inline-block;
+    background-image: url("../img/tumblr.svg");
+    width: 30px;
+    height: 30px;
+    &:hover {
+      background-image: url("../img/tumblr_h.svg")
+    }
   }
 }
+
 .suscribir {
   margin-top: 1em;
   margin: 0 auto;
   text-align: center;
 }
+h4.subt {
+  color: #000;
+  text-transform: uppercase;
+}
+.mc­field­group {
+    display: inline-block;
+}
+.clear {
+    display: inline-block;
+}
+label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+input#mce­EMAIL {
+    border: 1px rgba(128, 128, 128, 0.24) solid;
+    background: rgba(128, 128, 128, 0.24);
 
+    margin: 0 5px;
+    font-family: monospace;
+    padding: 5px;
+    text-align: center;
+    width: 220px;
+}
 
+input#mc­embedded­subscribe {
+    color: #000;
+    border: 2px #000 solid;
+    font-weight: bold;
+    margin-top: 1em;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #000;
+      color: white;
+    }
+}
+img.logop {
+      width: 70px;
+      height: auto;
+}
+img.logoo {
+      width: 100px;
+      height: auto;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  
-  section#letras {
-    height: 100vh;
-    padding-top: 2em;
+  section#sopa div#words {
+    height: 100%;
+  }
+  div.info {
+  display: block;
+  }
+  div.info2 {
+  display: none;
   }
   .suscribir {
     p {
       display: inline-block;
     }
   }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+  input#mc­embedded­subscribe {
+    margin-top: 0;
   }
+}
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+@media screen and (min-width: 1024px) {
+  section#sopa div.texto_s {
+    width: 50%;
+    margin-top: 1em;
   }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  section#sopa div#words {
+    height: 100%;
+    padding-top: 2em;
+    width: 50%;
   }
 }

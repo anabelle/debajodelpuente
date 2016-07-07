@@ -5,14 +5,14 @@ $( document ).ready( function($){
 
 	var palabras = [ 
 		// Verticales
-		{ palabra: 'Bitácora', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://bitacora.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'PuentePalabra', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://palabras.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Rio', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://rio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Caricultura', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://caricultura.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Bitácora', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://bitacora.debajodelpuente.com/', img: '../img/debajodelpuente.jpg' },
+		{ palabra: 'PuentePalabra', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://palabras.debajodelpuente.com/', img: '../img/puentepalabra.jpg' },
+		{ palabra: 'Rio', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://rio.debajodelpuente.com/', img: '../img/cuando-el-rio-suena.jpg' },
+		{ palabra: 'Caricultura', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://caricultura.debajodelpuente.com/', img: '../img/caricultura.jpg' },
 
 		// Horizontales
-		{ palabra: 'ZapatoLab', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://zapatolab.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Radio', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' }
+		{ palabra: 'ZapatoLab', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.' , link: 'http://zapatolab.debajodelpuente.com/', img: '../img/zapatolab.jpg' },
+		{ palabra: 'Radio', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' }
 	];
 
 	generarTabla( x, y);
@@ -239,18 +239,22 @@ $( document ).ready( function($){
 
     // cambio de vista
 	$(".vista_s").on( "click", function() {
-		$('#letras').fadeOut("fast");
+		$('#sopa').fadeOut("fast");
 		$('#reticula').fadeIn('slow');
 	});
 
 	$(".vista_r").on( "click", function() {
 		$('#reticula').fadeOut("fast");
-		$('#letras').slideDown();
+		$('#sopa').slideDown();
 	});
 
 	// mostrar información
+    $("div.info2").click(function(){
+     $("#informacion").slideToggle("slow,");
+    });
+
     $("div.info").click(function(){
-     $(this).next("#informacion").slideToggle("slow,");
+     $("#informacion").slideToggle("slow,");
     });
 
 
