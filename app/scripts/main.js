@@ -257,5 +257,4 @@ $( document ).ready( function($){
      $("#informacion").slideToggle("slow,");
     });
 
-
 });
