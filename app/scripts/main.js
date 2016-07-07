@@ -238,19 +238,19 @@ $( document ).ready( function($){
 	});
 
     // cambio de vista
-	$(".vista_s").on( "click", function() {
-		$('#letras').fadeOut("fast");
+	$('.vista_s').on( 'click', function() {
+		$('#letras').fadeOut('fast');
 		$('#reticula').fadeIn('slow');
 	});
 
-	$(".vista_r").on( "click", function() {
-		$('#reticula').fadeOut("fast");
+	$('.vista_r').on( 'click', function() {
+		$('#reticula').fadeOut('fast');
 		$('#letras').slideDown();
 	});
 
 	// mostrar información
-    $("div.info").click(function(){
-     $(this).next("#informacion").slideToggle("slow,");
+    $('div.info').click(function(){
+     $(this).next('#informacion').slideToggle('slow,');
     });
 
 
