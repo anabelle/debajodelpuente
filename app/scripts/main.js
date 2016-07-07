@@ -9,11 +9,17 @@ $( document ).ready( function($){
 		{ palabra: 'PuentePalabra', orientacion: 'v', desc: ' ' , link: 'http://palabras.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 		{ palabra: 'Rio', orientacion: 'v', desc: ' ' , link: 'http://rio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 		{ palabra: 'Caricultura', orientacion: 'v', desc: ' ' , link: 'http://caricultura.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Caretas', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/Aqay6PV_BwY', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Discordia', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/1mPr3jwLCDQ', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Teatro', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/7TrF9Igrqu4', img: 'http://placehold.it/280x180' },
 
 		// Horizontales
 		{ palabra: 'ZapatoLab', orientacion: 'h', desc: ' ' , link: 'http://zapatolab.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 		{ palabra: 'Loglines', orientacion: 'h', desc: ' ' , link: 'http://loglines.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Radio', orientacion: 'h', desc: ' ' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' }
+		{ palabra: 'Radio', orientacion: 'h', desc: ' ' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: 'http://placehold.it/280x180' }
 	];
 
 	generarTabla( x, y);
