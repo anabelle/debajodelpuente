@@ -244,7 +244,6 @@ $( document ).ready( function($){
 	});
 
     // cambio de vista
-<<<<<<< HEAD
 	$(".vista_s").on( "click", function() {
 		$('#sopa').fadeOut("fast");
 		$('#reticula').fadeIn('slow');
@@ -258,21 +257,6 @@ $( document ).ready( function($){
 	// mostrar información
     $("div.info2").click(function(){
      $("#informacion").slideToggle("slow,");
-=======
-	$('.vista_s').on( 'click', function() {
-		$('#letras').fadeOut('fast');
-		$('#reticula').fadeIn('slow');
-	});
-
-	$('.vista_r').on( 'click', function() {
-		$('#reticula').fadeOut('fast');
-		$('#letras').slideDown();
-	});
-
-	// mostrar información
-    $('div.info').click(function(){
-     $(this).next('#informacion').slideToggle('slow,');
->>>>>>> origin/master
     });
 
     $("div.info").click(function(){
