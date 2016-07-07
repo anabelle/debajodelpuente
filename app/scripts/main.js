@@ -22,6 +22,27 @@ $( document ).ready( function($){
 	generarTabla( x, y);
 	ubicarPalabras();
 
+	function resaltarpalabras(){
+		var i = 0;
+		function f() {
+			if( i >= palabras.length ) {
+			  i = 0;
+			  var prevClass = '.palabra_' + 9;
+			}else{
+			  var prevClass = '.palabra_' + ([i] - 1);
+			}
+			var currentClass = '.palabra_' + [i];
+			i += 1;
+
+			$( currentClass ).css('background', 'orange');
+			setTimeout(function(){ $( currentClass ).css('background', 'white') }, 500 );
+			// $( prevClass ).css('background', 'white');
+
+			setTimeout(f, 3000 );
+		}
+		f();
+	}
+
 	function generarTabla( x, y ){
 		var container = $('#words');
 		container.append('<table></table>');
@@ -106,7 +127,7 @@ $( document ).ready( function($){
 						}
 
 						if( $('.posible_v_'+posibleInicio).length >= largoPalabra ){
-							console.log( largoPalabra + ' es menor o igual que ' + $('.posible_v_'+posibleInicio).length  );
+							// console.log( largoPalabra + ' es menor o igual que ' + $('.posible_v_'+posibleInicio).length  );
 							$('.posible_v_'+posibleInicio).first().addClass('posible_v');
 						}
 					});
@@ -138,6 +159,7 @@ $( document ).ready( function($){
 		}
 
 		rellenarTabla();	
+		setTimeout( resaltarpalabras, 2000);
 	}
 
 	function letraAleatoria(){
@@ -210,4 +232,22 @@ $( document ).ready( function($){
 	$('[class^=\'palabra_\']').on( 'click', function(e){
 		window.open( $(this).data('link'), '_blank'); 
 	});
+
+    // cambio de vista
+	$(".vista_s").on( "click", function() {
+		$('#letras').fadeOut("fast");
+		$('#reticula').fadeIn('slow');
+	});
+
+	$(".vista_r").on( "click", function() {
+		$('#reticula').fadeOut("fast");
+		$('#letras').slideDown();
+	});
+
+	// mostrar información
+    $("div.info").click(function(){
+     $(this).next("#informacion").slideToggle("slow,");
+    });
+
+
 });
