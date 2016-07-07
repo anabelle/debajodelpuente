@@ -7,16 +7,12 @@ $( document ).ready( function($){
 		// Verticales
 		{ palabra: 'Bitácora', orientacion: 'v', link: 'http://bitacora.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 		{ palabra: 'PuentePalabra', orientacion: 'v', link: 'http://palabras.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'pez', orientacion: 'v', link: 'http://google.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'lobo', orientacion: 'v', link: 'http://google.com/2', img: 'http://placehold.it/280x180' },
-		{ palabra: 'compersión', orientacion: 'v', link: 'https://www.google.com/#q=compersion', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Rio', orientacion: 'v', link: 'http://rio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Caricultura', orientacion: 'v', link: 'http://caricultura.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 
 		// Horizontales
 		{ palabra: 'ZapatoLab', orientacion: 'h', link: 'http://zapatolab.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'murcielago', orientacion: 'h', link: 'http://google.com/4', img: 'http://placehold.it/280x180' },
-		{ palabra: 'nada', orientacion: 'h', link: 'http://google.com/7', img: 'http://placehold.it/280x180' },
-		{ palabra: 'mar', orientacion: 'h', link: 'http://google.com/8', img: 'http://placehold.it/280x180' },
-		{ palabra: 'sol', orientacion: 'h', link: 'http://google.com/9', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Radio', orientacion: 'h', link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' }
 	];
 
 	generarTabla( x, y);
