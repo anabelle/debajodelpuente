@@ -5,14 +5,20 @@ $( document ).ready( function($){
 
 	var palabras = [ 
 		// Verticales
-		{ palabra: 'Bitácora', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://bitacora.debajodelpuente.com/', img: '../img/debajodelpuente.jpg' },
-		{ palabra: 'PuentePalabra', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://palabras.debajodelpuente.com/', img: '../img/puentepalabra.jpg' },
-		{ palabra: 'Rio', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://rio.debajodelpuente.com/', img: '../img/cuando-el-rio-suena.jpg' },
-		{ palabra: 'Caricultura', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://caricultura.debajodelpuente.com/', img: '../img/caricultura.jpg' },
+		{ palabra: 'Bitácora', orientacion: 'v', desc: '' , link: 'http://bitacora.debajodelpuente.com/', img: '../img/debajodelpuente.jpg' },
+		{ palabra: 'PuentePalabra', orientacion: 'v', desc: '' , link: 'http://palabras.debajodelpuente.com/', img: '../img/puentepalabra.jpg' },
+		{ palabra: 'Rio', orientacion: 'v', desc: '' , link: 'http://rio.debajodelpuente.com/', img: '../img/cuando-el-rio-suena.jpg' },
+		{ palabra: 'Caricultura', orientacion: 'v', desc: '' , link: 'http://caricultura.debajodelpuente.com/', img: '../img/caricultura.jpg' },
+		{ palabra: 'Caretas', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/Aqay6PV_BwY', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Discordia', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/1mPr3jwLCDQ', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Teatro', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/7TrF9Igrqu4', img: 'http://placehold.it/280x180' },
 
 		// Horizontales
-		{ palabra: 'ZapatoLab', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.' , link: 'http://zapatolab.debajodelpuente.com/', img: '../img/zapatolab.jpg' },
-		{ palabra: 'Radio', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' }
+		{ palabra: 'ZapatoLab', orientacion: 'h', desc: '' , link: 'http://zapatolab.debajodelpuente.com/', img: '../img/zapatolab.jpg' },
+		{ palabra: 'Radio', orientacion: 'h', desc: '' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: 'http://placehold.it/280x180' }
 	];
 
 	generarTabla( x, y);
@@ -238,6 +244,7 @@ $( document ).ready( function($){
 	});
 
     // cambio de vista
+<<<<<<< HEAD
 	$(".vista_s").on( "click", function() {
 		$('#sopa').fadeOut("fast");
 		$('#reticula').fadeIn('slow');
@@ -251,6 +258,21 @@ $( document ).ready( function($){
 	// mostrar información
     $("div.info2").click(function(){
      $("#informacion").slideToggle("slow,");
+=======
+	$('.vista_s').on( 'click', function() {
+		$('#letras').fadeOut('fast');
+		$('#reticula').fadeIn('slow');
+	});
+
+	$('.vista_r').on( 'click', function() {
+		$('#reticula').fadeOut('fast');
+		$('#letras').slideDown();
+	});
+
+	// mostrar información
+    $('div.info').click(function(){
+     $(this).next('#informacion').slideToggle('slow,');
+>>>>>>> origin/master
     });
 
     $("div.info").click(function(){
