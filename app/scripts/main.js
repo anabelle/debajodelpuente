@@ -5,18 +5,26 @@ $( document ).ready( function($){
 
 	var palabras = [ 
 		// Verticales
-		{ palabra: 'Bitácora', orientacion: 'v', link: 'http://bitacora.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'PuentePalabra', orientacion: 'v', link: 'http://palabras.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Rio', orientacion: 'v', link: 'http://rio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Caricultura', orientacion: 'v', link: 'http://caricultura.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Bitácora', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://bitacora.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'PuentePalabra', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://palabras.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Rio', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://rio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Caricultura', orientacion: 'v', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://caricultura.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 
 		// Horizontales
-		{ palabra: 'ZapatoLab', orientacion: 'h', link: 'http://zapatolab.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Radio', orientacion: 'h', link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' }
+		{ palabra: 'ZapatoLab', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://zapatolab.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Radio', orientacion: 'h', desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' }
 	];
 
 	generarTabla( x, y);
 	ubicarPalabras();
+	generarCajas();
+
+	function generarCajas(){
+		for (var i = palabras.length - 1; i >= 0; i--) {
+			$('#reticula .row').append('<div class="col-xs-12 col-sm-6 col-md-3 proyecto"><div class="efecto"><img src="'+ palabras[i].img +'"><div class="overlay"><a class="verproyecto" href="'+ palabras[i].link +'">ver proyecto</a></div></div><a href="'+ palabras[i].link +'"><h4>'+ palabras[i].palabra +'</h4><p>'+ palabras[i].desc +'</p></a></div>');
+			// palabras[i]
+		}
+	}
 
 	function resaltarpalabras(){
 		var i = 0;
