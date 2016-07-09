@@ -25,7 +25,7 @@ header {
 }
 nav {
   margin: 0 auto;
-  max-width: 350px;
+  max-width: 360px;
 }
 p {
   font-family: 'Inconsolata',monospace;
@@ -110,6 +110,10 @@ section#sopa {
     float: right;
     width:100%;
     padding-bottom: 1em;
+  }
+  h2 {
+  font-size: 29px;
+  line-height: 1.4em;
   }
 }
 
@@ -324,6 +328,27 @@ img.logoo {
 }
 
 /* Responsive: Portrait tablets and up */
+@media screen and (max-width: 350px) {
+  section#sopa div.texto_s {
+      padding-top: 1em;
+      h2 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  h1.titulo {
+    padding: 10px 5px 5px;
+  }
+  .menu {
+    margin-right: 0;
+  }
+  header img {
+    margin-right: 5px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   section#sopa div#words {
     height: 100%;
@@ -346,8 +371,13 @@ img.logoo {
 
 @media screen and (min-width: 1024px) {
   section#sopa div.texto_s {
-    width: 50%;
     margin-top: 1em;
+    padding-left: 2em;
+    width: 50%;
+    height: 100%;
+    p {
+      font-size: 1.3em;
+    }
   }
   section#sopa div#words {
     height: 100%;
