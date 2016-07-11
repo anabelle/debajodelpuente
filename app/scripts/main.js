@@ -1,7 +1,7 @@
 $( document ).ready( function($){
 	// Definiciones
-	var x = 15;
-	var y = 15;
+	var x = 17;
+	var y = 17;
 
 	var palabras = [ 
 		// Verticales
@@ -18,6 +18,7 @@ $( document ).ready( function($){
 		{ palabra: 'Radio', orientacion: 'h', desc: '' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: 'http://placehold.it/280x180' },
 		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: 'http://placehold.it/280x180' },
+		{ palabra: 'LogLines', orientacion: 'h', desc: ' ' , link: 'http://loglines.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
 		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: 'http://placehold.it/280x180' }
 	];
 
@@ -244,23 +245,23 @@ $( document ).ready( function($){
 	});
 
     // cambio de vista
-	$(".vista_s").on( "click", function() {
-		$('#sopa').fadeOut("fast");
+	$('.vista_s').on( 'click', function() {
+		$('#sopa').fadeOut('fast');
 		$('#reticula').fadeIn('slow');
 	});
 
-	$(".vista_r").on( "click", function() {
-		$('#reticula').fadeOut("fast");
+	$('.vista_r').on( 'click', function() {
+		$('#reticula').fadeOut('fast');
 		$('#sopa').slideDown();
 	});
 
 	// mostrar información
-    $("div.info2").click(function(){
-     $("#informacion").slideToggle("slow,");
+    $('div.info2').click(function(){
+     $('#informacion').slideToggle('slow,');
     });
 
-    $("div.info").click(function(){
-     $("#informacion").slideToggle("slow,");
+    $('div.info').click(function(){
+     $('#informacion').slideToggle('slow,');
     });
 
 });
