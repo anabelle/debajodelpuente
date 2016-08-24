@@ -9,16 +9,16 @@ $( document ).ready( function($){
 		{ palabra: 'PuentePalabra', orientacion: 'v', desc: '' , link: 'http://palabras.debajodelpuente.com/', img: '../img/puentepalabra.jpg' },
 		{ palabra: 'Rio', orientacion: 'v', desc: '' , link: 'http://rio.debajodelpuente.com/', img: '../img/cuando-el-rio-suena.jpg' },
 		{ palabra: 'Caricultura', orientacion: 'v', desc: '' , link: 'http://caricultura.debajodelpuente.com/', img: '../img/caricultura.jpg' },
-		{ palabra: 'Caretas', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/Aqay6PV_BwY', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Miau', orientacion: 'v', desc: ' ' , link: 'https://drive.google.com/file/d/0B3Kr41kFa5cyNDlZcGFPT1cyMzA/view', img: '../img/puentemiau.jpg' },
 		{ palabra: 'Discordia', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/1mPr3jwLCDQ', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Teatro', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/7TrF9Igrqu4', img: 'http://placehold.it/280x180' },
+		{ palabra: 'Loglines', orientacion: 'v', desc: ' ' , link: 'http://loglines.debajodelpuente.com/', img: '../img/loglines.jpg' },
 
 		// Horizontales
 		{ palabra: 'ZapatoLab', orientacion: 'h', desc: '' , link: 'http://zapatolab.debajodelpuente.com/', img: '../img/zapatolab.jpg' },
-		{ palabra: 'Radio', orientacion: 'h', desc: '' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: 'http://placehold.it/280x180' }
+		{ palabra: 'Radio', orientacion: 'h', desc: '' , link: 'http://radio.debajodelpuente.com/', img: '../img/radio.jpg' },
+		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: '../img/arcabius.jpg' },
+		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: '../img/cerdos.jpg' },
+		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: '../img/palomo.jpg' }
 	];
 
 	generarTabla( x, y);
@@ -27,7 +27,7 @@ $( document ).ready( function($){
 
 	function generarCajas(){
 		for (var i = palabras.length - 1; i >= 0; i--) {
-			$('#reticula .row').append('<div class="col-xs-12 col-sm-6 col-md-3 proyecto"><div class="efecto"><img src="'+ palabras[i].img +'"><div class="overlay"><a class="verproyecto" href="'+ palabras[i].link +'">ver proyecto</a></div></div><a href="'+ palabras[i].link +'"><h4>'+ palabras[i].palabra +'</h4><p>'+ palabras[i].desc +'</p></a></div>');
+			$('#reticula .row').append('<div class="col-xs-12 col-sm-6 col-md-3 proyecto"><div class="efecto"><img src="'+ palabras[i].img +'"><div class="overlay"><a class="verproyecto" href="'+ palabras[i].link +'" target="_blank">ver proyecto</a></div></div><a href="'+ palabras[i].link +'"><h4>'+ palabras[i].palabra +'</h4><p>'+ palabras[i].desc +'</p></a></div>');
 			// palabras[i]
 		}
 	}
@@ -262,5 +262,17 @@ $( document ).ready( function($){
     $("div.info").click(function(){
      $("#informacion").slideToggle("slow,");
     });
+
+
+	$('.iconm').on('click',function(){
+	  $('.iconn').removeClass('fondoi');
+	  $(this).addClass('fondoi');
+	});
+
+	$('.iconn').on('click',function(){
+	  $('.iconm').removeClass('fondoi');
+	  $(this).addClass('fondoi');
+	});
+
 
 });
