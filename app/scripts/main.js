@@ -15,18 +15,10 @@ $( document ).ready( function($){
 
 		// Horizontales
 		{ palabra: 'ZapatoLab', orientacion: 'h', desc: '' , link: 'http://zapatolab.debajodelpuente.com/', img: '../img/zapatolab.jpg' },
-<<<<<<< HEAD
 		{ palabra: 'Radio', orientacion: 'h', desc: '' , link: 'http://radio.debajodelpuente.com/', img: '../img/radio.jpg' },
 		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: '../img/arcabius.jpg' },
 		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: '../img/cerdos.jpg' },
 		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: '../img/palomo.jpg' }
-=======
-		{ palabra: 'Radio', orientacion: 'h', desc: '' , link: 'http://radio.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: 'http://placehold.it/280x180' },
-		{ palabra: 'LogLines', orientacion: 'h', desc: ' ' , link: 'http://loglines.debajodelpuente.com/', img: 'http://placehold.it/280x180' },
-		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: 'http://placehold.it/280x180' }
->>>>>>> origin/master
 	];
 
 	generarTabla( x, y);
