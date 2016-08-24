@@ -10,7 +10,6 @@ $( document ).ready( function($){
 		{ palabra: 'Rio', orientacion: 'v', desc: '' , link: 'http://rio.debajodelpuente.com/', img: '../img/cuando-el-rio-suena.jpg' },
 		{ palabra: 'Caricultura', orientacion: 'v', desc: '' , link: 'http://caricultura.debajodelpuente.com/', img: '../img/caricultura.jpg' },
 		{ palabra: 'Miau', orientacion: 'v', desc: ' ' , link: 'https://drive.google.com/file/d/0B3Kr41kFa5cyNDlZcGFPT1cyMzA/view', img: '../img/puentemiau.jpg' },
-		{ palabra: 'Discordia', orientacion: 'v', desc: ' ' , link: 'https://youtu.be/1mPr3jwLCDQ', img: 'http://placehold.it/280x180' },
 		{ palabra: 'Loglines', orientacion: 'v', desc: ' ' , link: 'http://loglines.debajodelpuente.com/', img: '../img/loglines.jpg' },
 
 		// Horizontales
