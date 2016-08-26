@@ -339,7 +339,9 @@ img.logoo {
       width: 100px;
       height: auto;
 }
-
+img.logosm {
+    max-width: 100%;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (max-width: 350px) {
   section#sopa div.texto_s {
