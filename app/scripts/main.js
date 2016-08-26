@@ -9,15 +9,12 @@ $( document ).ready( function($){
 		{ palabra: 'PuentePalabra', orientacion: 'v', desc: '' , link: 'http://palabras.debajodelpuente.com/', img: '../img/puentepalabra.jpg' },
 		{ palabra: 'Rio', orientacion: 'v', desc: '' , link: 'http://rio.debajodelpuente.com/', img: '../img/cuando-el-rio-suena.jpg' },
 		{ palabra: 'Caricultura', orientacion: 'v', desc: '' , link: 'http://caricultura.debajodelpuente.com/', img: '../img/caricultura.jpg' },
-		{ palabra: 'Miau', orientacion: 'v', desc: ' ' , link: 'https://drive.google.com/file/d/0B3Kr41kFa5cyNDlZcGFPT1cyMzA/view', img: '../img/puentemiau.jpg' },
-		{ palabra: 'Loglines', orientacion: 'v', desc: ' ' , link: 'http://loglines.debajodelpuente.com/', img: '../img/loglines.jpg' },
 
 		// Horizontales
 		{ palabra: 'ZapatoLab', orientacion: 'h', desc: '' , link: 'http://zapatolab.debajodelpuente.com/', img: '../img/zapatolab.jpg' },
 		{ palabra: 'Radio', orientacion: 'h', desc: '' , link: 'http://radio.debajodelpuente.com/', img: '../img/radio.jpg' },
-		{ palabra: 'Arcabius', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/UCoJUwnaBWU', img: '../img/arcabius.jpg' },
-		{ palabra: 'Cerdos', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/3KzbUTrbl1I', img: '../img/cerdos.jpg' },
-		{ palabra: 'Palomo', orientacion: 'h', desc: ' ' , link: 'https://youtu.be/4hDHDxjKXu0', img: '../img/palomo.jpg' }
+		{ palabra: 'Miau', orientacion: 'v', desc: ' ' , link: 'https://drive.google.com/file/d/0B3Kr41kFa5cyNDlZcGFPT1cyMzA/view', img: '../img/puentemiau.jpg' },
+		{ palabra: 'Loglines', orientacion: 'v', desc: ' ' , link: 'http://loglines.debajodelpuente.com/', img: '../img/loglines.jpg' },
 	];
 
 	generarTabla( x, y);
